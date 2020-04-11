@@ -1,7 +1,15 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 import FollowCard from './FollowCard';
+
+//styling
+const StyledHThree = styled.h3`
+text-align: left;
+font-size: 1.8rem;
+width: 70%;
+`
 
 class UserFollowers extends React.Component {
     constructor() {
@@ -9,6 +17,7 @@ class UserFollowers extends React.Component {
         this.state = {
             followerData: [],
         };
+        this.h3Ref = React.createRef();
     }
 
     componentDidMount() {
@@ -26,7 +35,7 @@ class UserFollowers extends React.Component {
     render() {
         return(
             <section className="followers">
-                <h2>Followers</h2>
+                <StyledHThree ref={this.h3Ref}>Followers</StyledHThree>
                 {this.state.followerData.map(item => {
                         return(
                                 <FollowCard 

@@ -4,19 +4,23 @@ import styled from 'styled-components';
 function FollowCard (props) {
     const StyledCard = styled.section`
         display:flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         width: 70%;
-        margin: 3%;
+        margin: 3% 0;
         padding: 3% 0;
         border: 8px ridge rosybrown;
         background-color: linen;
+    `
+    const StyledHThree = styled.h3`
+        font-size: 1.8rem;
+        
     `
 
     return (
         <StyledCard key={props.id}>
             <img src={props.AvaUrl} alt={props.name}/>
-            <h3><a href={props.github}>{props.name}</a></h3>
+            <StyledHThree>User Name:<br /><a href={props.github}>{props.name}</a></StyledHThree>
         </StyledCard>
     )
 }

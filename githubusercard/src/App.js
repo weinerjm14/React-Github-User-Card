@@ -9,10 +9,10 @@ import UserFollows from './Following';
 
 //styling
 const FlexContainer = styled.section`
-  width: 80%;
+  width: 95%;
   margin: 2% auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   `
 
 class App extends React.Component {
@@ -26,17 +26,17 @@ class App extends React.Component {
   } 
    render() {
     return (
-      <div className="App">
-      <h1>Welcome To The (Unofficial) GitHub Finder App </h1>
-      <UserData />
-      
-      <FlexContainer 
-        ref={this.sectionRef}
-        className="follow-container"
-      >
-        <UserFollowers />
-        <UserFollows />
-      </FlexContainer>
+      <div className="app-container">
+        <h1>Welcome To The (Unofficial) GitHub Finder App </h1>
+        <UserData />
+        
+        <FlexContainer 
+          ref={this.sectionRef}
+          className="follow-container"
+          >
+          <UserFollowers />
+          <UserFollows />
+        </FlexContainer>
     </div>
     
   );

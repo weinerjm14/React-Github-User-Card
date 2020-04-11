@@ -23,7 +23,10 @@ function UserCard (props) {
     const SpacingContainer = styled.section`
         padding-left: 8%;
     `
-    
+    const StyledHThree = styled.h3`
+        font-size: 1.8rem;
+        
+    `
     
     return (
         
@@ -33,7 +36,7 @@ function UserCard (props) {
             </section>
             <SpacingContainer className="info-container">
                 <h2><a href={props.github}>{props.name}</a></h2>
-                <h3>Company: {props.company}</h3>
+                <StyledHThree >Company: {props.company}</StyledHThree >
                 <p>Location: {props.location}</p>
                 <p>Website: <a href={props.blog}>{props.blog}</a></p>
                 <p>Followers: {props.followers}</p>
