@@ -4,23 +4,20 @@ import axios from 'axios';
 import UserCard from './UserCard';
 
 class UserData extends React.Component {
-    constructor() {
-        
+    constructor() {        
         super();
         this.state = {
           userInfo: [],
-          
+          userid: 'weinerjm14',          
         };
       }
     
-    componentDidMount() {
-       
-        axios.get('https://api.github.com/users/weinerjm14')
+    componentDidMount() {       
+        axios.get(`https://api.github.com/users/${this.state.userid}`)
         .then(
             res => {this.setState({ userInfo: res.data })},
         )
-        .catch(err => {console.log('error:', err)});
-       
+        .catch(err => {console.log('error:', err)});       
     };
     render(){
         return(
