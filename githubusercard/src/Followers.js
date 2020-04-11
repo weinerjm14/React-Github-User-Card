@@ -8,12 +8,16 @@ class UserFollowers extends React.Component {
         super();
         this.state = {
             followerData: [],
-            userid: 'weinerjm14',
         };
     }
 
     componentDidMount() {
-        axios.get(`https://api.github.com/users/${this.state.userid}/followers`)
+        // axios.get(`https://api.github.com/users/${this.state.userid}/followers`)
+        // .then(
+        //     res => {this.setState({ followerData: res.data })},           
+        // )
+        // .catch(err => {console.log('error:', err)});
+         axios.get(`https://api.github.com/users/weinerjm14/followers`)
         .then(
             res => {this.setState({ followerData: res.data })},           
         )

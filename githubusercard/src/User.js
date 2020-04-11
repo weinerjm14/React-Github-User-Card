@@ -7,17 +7,21 @@ class UserData extends React.Component {
     constructor() {        
         super();
         this.state = {
-          userInfo: [],
-          userid: 'weinerjm14',          
+          userInfo: [],          
         };
       }
   
     componentDidMount() {       
-        axios.get(`https://api.github.com/users/${this.state.userid}`)
+        // axios.get(`https://api.github.com/users/${this.state.userid}`)
+        // .then(
+        //     res => {this.setState({ userInfo: res.data })},
+        // )
+        // .catch(err => {console.log('error:', err)});   
+        axios.get(`https://api.github.com/users/weinerjm14`)
         .then(
             res => {this.setState({ userInfo: res.data })},
         )
-        .catch(err => {console.log('error:', err)});       
+        .catch(err => {console.log('error:', err)})    
     };
     render(){
         return(
@@ -33,6 +37,7 @@ class UserData extends React.Component {
          repos={this.state.userInfo.public_repos}
          blog={this.state.userInfo.blog}
          company={this.state.userInfo.company}
+         login={this.state.userInfo.login}
          />
         )
     }

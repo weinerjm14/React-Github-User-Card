@@ -7,13 +7,17 @@ class UserFollows extends React.Component {
     constructor() {
         super();
         this.state = {
-            followsData: [],
-            userid: 'weinerjm14',
+            followsData: [], 
         };
     }
 
     componentDidMount() {
-        axios.get(`https://api.github.com/users/${this.state.userid}/following`)
+        // axios.get(`https://api.github.com/users/${this.state.userid}/following`)
+        // .then(
+        //     res => {this.setState({ followsData: res.data })},           
+        // )
+        // .catch(err => {console.log('error:', err)});
+        axios.get(`https://api.github.com/users/weinerjm14/following`)
         .then(
             res => {this.setState({ followsData: res.data })},           
         )

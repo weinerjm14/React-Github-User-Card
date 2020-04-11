@@ -1,13 +1,17 @@
 import React from "react";
 import styled from 'styled-components';
 
+import GitHubCalendar from 'react-github-calendar';
+import ReactTooltip from 'react-tooltip';
+
 function UserCard (props) {
     const FlexContainer = styled.section`
         width: 80%;
-        margin: 0 auto;
+        margin: 3% auto;
         display: flex;
         justify-content: center;
-        padding: 4% 0;
+        align-items: center;
+        padding: 4% 2%;
         border: 8px ridge rosybrown;
         background-color: linen;
         
@@ -22,8 +26,9 @@ function UserCard (props) {
     
     
     return (
+        
         <FlexContainer className="UserInfoCard" key={props.id}>
-            <section className='img-container'>
+           <section className='img-container'>
                 <StyledImg src={props.AvaUrl} alt={props.name}/>
             </section>
             <SpacingContainer className="info-container">
@@ -36,6 +41,9 @@ function UserCard (props) {
                 <p>Repos: {props.repos}</p>
                 <p>Bio:<br/>{props.bio}</p>
             </SpacingContainer>
+            <GitHubCalendar username={props.login} color="sienna" >
+                <ReactTooltip delayShow={50} html />
+            </GitHubCalendar>    
         </FlexContainer>
     )
 }

@@ -4,10 +4,11 @@ import styled from 'styled-components';
 function FollowCard (props) {
     const StyledCard = styled.section`
         display:flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        align-items: center;
         width: 70%;
         margin: 3%;
-        padding: 3% 2%;
+        padding: 3% 0;
         border: 8px ridge rosybrown;
         background-color: linen;
     `
