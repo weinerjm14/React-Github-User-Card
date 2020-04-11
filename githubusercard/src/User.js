@@ -4,20 +4,15 @@ import axios from 'axios';
 import UserCard from './UserCard';
 
 class UserData extends React.Component {
-    constructor() {        
-        super();
+    constructor(props) {        
+        super(props);
         this.state = {
           userInfo: [],          
         };
       }
   
     componentDidMount() {       
-        // axios.get(`https://api.github.com/users/${this.state.userid}`)
-        // .then(
-        //     res => {this.setState({ userInfo: res.data })},
-        // )
-        // .catch(err => {console.log('error:', err)});   
-        axios.get(`https://api.github.com/users/weinerjm14`)
+        axios.get(`https://api.github.com/users/${this.props.userid}`)
         .then(
             res => {this.setState({ userInfo: res.data })},
         )
