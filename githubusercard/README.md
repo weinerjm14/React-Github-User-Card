@@ -66,3 +66,27 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+notes to self
+from app
+// handleChanges = e => {
+    //   console.log("this.state.userid: ", this.state.userid);
+    // };
+    //
+    // getNewUser = e => {
+    //   e.preventDefault();
+    //   this.setState({ userid: e.target.value });
+    //   axios.get(`https://api.github.com/users/${this.state.userid}`)
+    //    .then( res => this.setState({userInfo: res.data}))
+    //    .catch(err => console.log('error:', err))
+      
+      
+    // };
+     // componentDidUpdate(prevProps, prevState ) {
+  //   console.log('Did Update!', prevState, this.setState.userInfo)
+  //   // if (prevState.userInfo !== this.state.userInfo){
+    
+  //   // } 
+  // }
+  /* <ChoseUser onChange={this.handleChanges} onClick={this.getNewUser}/> *
+  

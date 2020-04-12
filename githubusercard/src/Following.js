@@ -12,7 +12,7 @@ class UserFollows extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://api.github.com/users/${this.props.userid}/following`)
+        axios.get(`https://api.github.com/users/weinerjm14/following`)
         .then(
             res => {this.setState({ followsData: res.data })},           
         )

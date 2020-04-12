@@ -11,13 +11,19 @@ class UserData extends React.Component {
         };
       }
   
-    componentDidMount() {       
-        axios.get(`https://api.github.com/users/${this.props.userid}`)
+    componentDidMount() { 
+           
+        axios.get(`https://api.github.com/users/weinerjm14`)
         .then(
             res => {this.setState({ userInfo: res.data })},
         )
-        .catch(err => {console.log('error:', err)})    
+        .catch(err => {console.log('error:', err)}) 
+        
     };
+    // componentDidUpdate(){
+    //     console.log('userupdate', this.state.props.userid)
+       
+    // };
     render(){
         return(
          <UserCard 
