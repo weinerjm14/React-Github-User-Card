@@ -406,6 +406,13 @@ a:hover {
 .follows, .followers {
   width: 40%
 }
+.title {
+  width: 71%;
+  padding: 1%;
+  border: 8px ridge rosybrown;
+  background-color: linen;
+  text-align: center;
+}
 /* Styles for Cards */
 .userInfoCard {
 width: 80%;
@@ -419,6 +426,7 @@ background-color: linen;
 }
 .userInfoCard .info-container {
   padding-left: 8%;
+  
 }
 .fc-container {
   display:flex;
@@ -426,13 +434,41 @@ background-color: linen;
   align-items: center;
   width: 70%;
   margin: 3% 0;
-  padding: 3% 0;
+  padding: 3% 0 3% 3%;
   border: 8px ridge rosybrown;
   background-color: linen;
+}
+.fc-container img {
+  margin-right: 8%;
 }
 .follow-container{
   width: 95%;
   margin: 2% auto;
   display: flex;
   justify-content: center;
+}
+/* styles for media queries */
+@media (max-width:800px) {
+  .userInfoCard {
+    flex-direction: column;
+
+  }
+  .follows, .followers {
+    margin: 0 auto;
+    width: 100%
+  }
+  .fc-container {
+    width: 75%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    width: 76%;
+  }
+  .follow-container {
+    flex-direction: column;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;  
+  }
 }

@@ -20,13 +20,13 @@ function UserCard (props) {
             </section>
             <section className="info-container">
                 <h2><a href={props.github}>{props.name}</a></h2>
-                <h3 >Company: {props.company}</h3 >
-                <p>Location: {props.location}</p>
-                <p>Website: <a href={props.blog}>{props.blog}</a></p>
-                <p>Followers: {props.followers}</p>
-                <p>Following: {props.following}</p>
-                <p>Repos: {props.repos}</p>
-                <p>Bio:<br/>{props.bio}</p>
+                <h3><i>Company:</i><br />{props.company}</h3 >
+                <p><b>Location:</b> {props.location}</p>
+                <p><b>Website:</b> <a href={props.blog}>{props.blog}</a></p>
+                <p><b>Followers:</b> {props.followers}</p>
+                <p><b>Following:</b> {props.following}</p>
+                <p><b>Repos:</b> {props.repos}</p>
+                <p><b>Bio:</b><br/>{props.bio}</p>
             </section>
             <GitHubCalendar username={props.login} color="sienna" >
                 <ReactTooltip delayShow={50} html />

@@ -7,7 +7,8 @@ class UserData extends React.Component {
     constructor(props) {        
         super(props);
         this.state = {
-          userInfo: [],          
+          userInfo: [],
+                   
         };
       }
   
@@ -20,6 +21,13 @@ class UserData extends React.Component {
         .catch(err => {console.log('error:', err)}) 
         
     };
+    // componentDidUpdate(prevProps, prevState) {
+    //     if (prevProps.userid !== this.props.userid){
+    //         axios.get(`https://api.github.com/users/${this.state.userid}`)
+    //         .then( res => this.setState({userInfo: res.data}))
+    //         .catch(err => console.log('error:', err))
+    //     }
+    // }
     // componentDidUpdate(){
     //     console.log('userupdate', this.state.props.userid)
        

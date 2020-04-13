@@ -21,7 +21,9 @@ class UserFollows extends React.Component {
     render() {
         return(
             <section className="follows">
-                <h3 ref={this.h3Ref}>Following</h3>
+                <section className="title">
+                    <h3 ref={this.h3Ref}>Following</h3>
+                </section>
                 {this.state.followsData.map(item => {
                         return(
                                 <FollowCard 
